@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+    <body >
+        <nav class="bg-amber-900 text-white shadow-lg fixed w-full top-0 z-50">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex items-center justify-between h-16">
+                    <!-- Logo and brand name -->
+                    <div class="flex items-center">
+                        <a href="/" class="flex items-center">
+                            <span class="text-2xl">☕</span>
+                            <span class="ml-2 text-xl font-semibold">One Coffee Kart</span>
+                        </a>
+                    </div>
+    
+                    <!-- Desktop menu -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="/about" class="hover:text-amber-200 transition-colors duration-200">
+                            About
+                        </a>
+                        <a href="/contact" class="px-4 py-2 rounded-md hover:text-amber-200 transition-colors duration-200">
+                            Contact
+                        </a>
+                    </div>
+    
+                    <!-- Mobile menu button -->
+                    <button id="menu-btn" class="md:hidden p-2 hover:bg-amber-800 rounded-md">
+                        <svg id="menu-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+    
+                <!-- Mobile menu -->
+                <div id="mobile-menu" class="hidden md:hidden pb-4">
+                    <div class="flex flex-col space-y-4">
+                        <a href="/about" class="hover:bg-amber-800 px-3 py-2 rounded-md transition-colors duration-200">
+                            About
+                        </a>
+                        <a href="/contact" class="hover:bg-amber-700 px-3 py-2 rounded-md hover:bg-amber-600 transition-colors duration-200 text-center">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+        <div style="background: url('images/pexels-ifreestock-585750.jpg') no-repeat  center; background-size: cover; height: 100vh; width: 100%;" class="w-full max-h-screen">
+            <!-- Content here -->
+        </div>
+        <div class="h-16 w-full bg-red-200">
+
+        </div>
+        
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
+        <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Contact Us</h2>
+        <form action=""  class="space-y-4" id="formSubmit">
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                <input type="text" id="name" name="Name" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" name="Email" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                <input type="tel" id="phone" name="Phone" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div>
+                <label for="place" class="block text-sm font-medium text-gray-700">Place</label>
+                <input type="text" id="place" name="Place" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            </div>
+
+            <div>
+                <button type="submit" class="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        $("#formSubmit").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbzGu1rQX-cAim2_Ef3LPPBMWpg2gQ52cVxZfxldJ2DluNmBDujUe9w8mOhcl5Hdq8Vk/exec",
+                data:$("#formSubmit").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script> -->
+</body>
+</html>
