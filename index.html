@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Orbitron:wght@400..900&family=Satisfy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
     <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
 </head>
     <body >
         <nav class="bg-amber-900 text-white shadow-lg  fixed w-full top-0 z-50">
@@ -27,10 +29,10 @@
     
                     <!-- Desktop menu -->
                     <div class="hidden md:flex items-center space-x-8">
-                        <a href="/about" class="hover:text-amber-200 transition-colors duration-200">
+                        <a href="#about" class="hover:text-amber-200 transition-colors duration-200">
                             About
                         </a>
-                        <a href="/contact" class="px-4 py-2 rounded-md hover:text-amber-200 transition-colors duration-200">
+                        <a href="#footer" class="px-4 py-2 rounded-md hover:text-amber-200 transition-colors duration-200">
                             Contact
                         </a>
                     </div>
@@ -49,10 +51,10 @@
                 <!-- Mobile menu -->
                 <div id="mobile-menu" class="hidden md:hidden pb-4">
                     <div class="flex flex-col space-y-4">
-                        <a href="/about" class="hover:bg-amber-800 px-3 py-2 rounded-md transition-colors duration-200">
+                        <a href="#about" class="hover:bg-amber-800 px-3 py-2 rounded-md transition-colors duration-200">
                             About
                         </a>
-                        <a href="/contact" class="hover:bg-amber-700 px-3 py-2 rounded-md  transition-colors duration-200 text-center ">
+                        <a href="#footer" class="bg-amber-600 hover:bg-amber-700 px-3 py-2 rounded-md  transition-colors duration-200 text-center ">
                             Contact
                         </a>
                     </div>
@@ -60,203 +62,197 @@
             </div>
         </nav>
 
+         <!-- Hero Section -->
+    <section id="home" class="pt-20 md:pt-0">
+        <div class="relative h-screen">
+            <div class="absolute inset-0 bg-[url('images/pexels-ifreestock-585750.jpg')] bg-cover bg-center"></div>
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="relative container mx-auto px-6 h-full flex items-center">
+                <div class="text-white max-w-2xl">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">Premium Wayanad Coffee</h1>
+                    <p class="text-xl mb-8 font-statisfy">Direct from the misty hills of Western Ghats to your cup</p>
+                    <button class="bg-amber-600 hover:bg-amber-700 text-white py-3 px-8 rounded-full text-lg">
+                        Get Today's Prices
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="w-full h-screen bg-cover bg-center sm:bg-auto md:bg-cover lg:bg-cover xl:bg-cover flex items-center justify-start pl-16 md:pl-44" 
-     style="background-image: url('images/pexels-ifreestock-585750.jpg');">
-    <div class="text-white">
-        <p class="text-2xl font-statisfy"> From Local Farmers to Global Cups </p>
-        <p class="mt-3"> The Journey of Our Coffee</p>
-    </div>
-    </div>
-
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12">The Rich History of Coffee</h2>
-            <div class="grid md:grid-cols-2 gap-8 items-center">
+            <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-amber-900 mb-12 text-center">Our Story</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <img src="/images/pexels-ifreestock-585750.jpg" alt="Historical coffee cultivation" class="rounded-lg shadow-lg"/>
+                    <img src="/images/delicious-organic-coffee-still-life.jpg" alt="Coffee plantation" class="rounded-lg shadow-lg"/>
                 </div>
                 <div>
-                    <p class="text-lg leading-relaxed">
-                        Coffee's journey began in Ethiopia's ancient coffee forests, where legend tells of a goat herder named Kaldi who first discovered coffee's energizing effects. By the 15th century, coffee was being grown in Yemen's Sufi monasteries, spreading across the Middle East, Europe, and eventually worldwide.
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        With over two decades of experience in the coffee industry, we've built strong relationships 
+                        with farmers and roasters worldwide. Our commitment to quality, sustainability, and fair trade 
+                        practices sets us apart in the global coffee market.
                     </p>
-                    <p class="text-lg leading-relaxed mt-4">
-                        Today, coffee is the world's second most traded commodity, supporting millions of farmers and bringing people together across cultures.
-                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Global Usage Section -->
-    <section class="py-16 bg-amber-100">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12">Global Coffee Consumption</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="/images/pexels-ifreestock-585750.jpg" alt="Coffee statistics" class="w-full mb-4 rounded"/>
-                    <h3 class="text-xl font-bold mb-2">2 Billion</h3>
-                    <p>Cups of coffee consumed daily worldwide</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="/images/pexels-ifreestock-585750.jpg" alt="Coffee farming" class="w-full mb-4 rounded"/>
-                    <h3 class="text-xl font-bold mb-2">50+ Countries</h3>
-                    <p>Active coffee-producing nations</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <img src="/images/pexels-ifreestock-585750.jpg" alt="Coffee trade" class="w-full mb-4 rounded"/>
-                    <h3 class="text-xl font-bold mb-2">$100 Billion</h3>
-                    <p>Annual global coffee market value</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
-    <!-- Products Section -->
-    <section id="products" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12">Our Premium Offerings</h2>
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="bg-amber-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-                    <img src="/images/pexels-ifreestock-585750.jpg" alt="Arabica beans" class="w-full rounded mb-4"/>
-                    <h3 class="text-xl font-bold mb-2">Arabica Premium</h3>
-                    <p>Smooth, sweet taste with chocolate and sugar tones</p>
+    <!-- Market Price Advantage Section -->
+    <section id="pricing" class="py-20 bg-amber-800 text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">We're Here For Your Coffee</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="bg-amber-900 p-8 rounded-lg shadow-xl">
+                    <h3 class="text-2xl font-bold mb-4">Instant Payment, Premium Prices</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Same day payment guarantee
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Above market rates for quality beans
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-6 h-6 mr-2 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Direct farmer partnerships
+                        </li>
+                    </ul>
                 </div>
-                <div class="bg-amber-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-                    <img src="/images/pexels-ifreestock-585750.jpg" alt="Robusta beans" class="w-full rounded mb-4"/>
-                    <h3 class="text-xl font-bold mb-2">Robusta Select</h3>
-                    <p>Strong and deep, perfect for espresso blends</p>
-                </div>
-                <div class="bg-amber-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-                    <img src="/images/pexels-ifreestock-585750.jpg" alt="Specialty coffee" class="w-full rounded mb-4"/>
-                    <h3 class="text-xl font-bold mb-2">Specialty Grade</h3>
-                    <p>Single-origin beans with unique flavor profiles</p>
-                </div>
-                <div class="bg-amber-50 p-6 rounded-lg shadow hover:shadow-xl transition">
-                    <img src="/images/pexels-ifreestock-585750.jpg" alt="Organic coffee" class="w-full rounded mb-4"/>
-                    <h3 class="text-xl font-bold mb-2">Organic Certified</h3>
-                    <p>Sustainably grown and certified organic beans</p>
+                <div class="text-lg space-y-4">
+                    <p>We understand that farmers need reliable partners who value quality and offer fair compensation. Our unique position in the market allows us to offer premium prices with instant payment.</p>
+                    <p>Current Premium: <span class="text-2xl font-bold text-green-400">₹15-20/kg</span> above market rate</p>
+                    <button class="bg-green-500 hover:bg-green-600 text-white py-3 px-8 rounded-full text-lg mt-4">
+                        Check Today's Rates
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
-        
-        
-        
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div class="w-full max-w-md p-8 rounded-lg shadow-lg bg-red-300">
-        <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Contact Us</h2>
-        <form action=""  class="space-y-4" id="formSubmit">
-            <div>
-                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-                <input type="text" id="name" name="Name" required
-                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+     <!-- Wayanad Farming Section -->
+     <section id="farming" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-amber-900 mb-12 text-center">Our Wayanad Coffee Heritage</h2>
+            <div class="grid md:grid-cols-2 gap-12 mb-12">
+                <div>
+                    <img src="/images/pexels-ifreestock-585750.jpg" alt="Wayanad coffee plantation" class="rounded-lg shadow-lg mb-4"/>
+                    <p class="text-sm text-gray-600 italic">Misty morning at our Wayanad plantation</p>
+                </div>
+                <div class="space-y-4">
+                    <p class="text-gray-700 text-lg">Wayanad, a lush district in Kerala, India, is known for its high-quality coffee, particularly Arabica and Robusta varieties. Grown in the cool climate of the Western Ghats, Wayanad coffee offers a full-bodied flavor with chocolate and nutty undertones. Many plantations use shade-grown and organic methods, promoting biodiversity. This sustainable approach gives Wayanad coffee a unique character that appeals to local and global markets, with plantation tours allowing visitors to experience the region's rich coffee culture firsthand.</p>
+                    <h3 class="text-xl font-bold text-amber-900">Why Wayanad Coffee is Special:</h3>
+                    <ul class="list-disc pl-6 text-gray-700">
+                        <li>Ideal Climate and Altitude</li>
+                        <li>Organic and Sustainable Practices</li>
+                        <li>Biodiversity</li>
+                        <li>Artisanal Processing</li>
+                    </ul>
+                </div>
             </div>
-
-            <div>
-                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                <input type="email" id="email" name="Email" required
-                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+            
+            <!-- Additional Farm Images -->
+            <div class="grid md:grid-cols-3 gap-6 mt-12">
+                <div>
+                    <img src="/images/pexels-ifreestock-585750.jpg" alt="Coffee processing" class="rounded-lg shadow-lg mb-2"/>
+                    <p class="text-gray-600">Traditional processing methods</p>
+                </div>
+                <div>
+                    <img src="/images/pexels-ifreestock-585750.jpg" alt="Coffee cherries" class="rounded-lg shadow-lg mb-2"/>
+                    <p class="text-gray-600">Ripening coffee cherries</p>
+                </div>
+                <div>
+                    <img src="/images/pexels-ifreestock-585750.jpg" alt="Shade grown coffee" class="rounded-lg shadow-lg mb-2"/>
+                    <p class="text-gray-600">Shade-grown coffee plants</p>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div>
-                <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
-                <input type="tel" id="phone" name="Phone" required
-                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-            </div>
+    
 
-            <div>
-                <label for="place" class="block text-sm font-medium text-gray-700">Place</label>
-                <input type="text" id="place" name="Place" required
-                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
-            </div>
 
-            <div>
-                <button type="submit" class="w-full py-2 px-4 bg-blue-600 text-white font-semibold rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    Submit
-                </button>
-            </div>
-        </form>
+    <div class="w-full  flex items-center justify-center mb-3 ">
+        <div class=" w-full max-w-lg rounded-lg shadow-lg p-4">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Contact Us</h2>
+            <form action=""  class="space-y-4" id="formSubmit">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" id="name" name="Name" required
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                </div>
+    
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="Email" required
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                </div>
+    
+                <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                    <input type="tel" id="phone" name="Phone" required
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                </div>
+    
+                <div>
+                    <label for="place" class="block text-sm font-medium text-gray-700">Place</label>
+                    <input type="text" id="place" name="Place" required
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                </div>
+    
+                <div>
+                    <button type="submit" class="w-full py-2 px-4  text-white font-semibold rounded-md shadow-md bg-amber-600 hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
 
     
 
-    <script>
-        $("#formSubmit").submit((e)=>{
-            e.preventDefault()
-            $.ajax({
-                url:"https://script.google.com/macros/s/AKfycbzGu1rQX-cAim2_Ef3LPPBMWpg2gQ52cVxZfxldJ2DluNmBDujUe9w8mOhcl5Hdq8Vk/exec",
-                data:$("#formSubmit").serialize(),
-                method:"post",
-                success:function (response){
-                    alert("Form submitted successfully")
-                    window.location.reload()
-                },
-                error:function (err){
-                    alert("Something Error")
-    
-                }
-            })
-        })
-    </script>
-
-
- <!-- Footer -->
- <footer class="bg-brown-900 text-white py-8" style="background-color: #2A1810;">
-    <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div>
-                <h3 class="text-xl font-bold mb-4">One Coffee Kart</h3>
-                <p>Premium coffee sourcing and export solutions</p>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4">Contact</h3>
-                <p>Email: onecoffeekart@gmail.com</p>
-                <p>Phone 1: 8943454306</p>
-                <p>Phone 2: 8075243097</p>
-
-            </div>
-            <div>
-                <h3 class="text-xl font-bold mb-4">Follow Us</h3>
-                <div class="space-x-4">
-                    <a href="#" class="hover:text-amber-200">Facebook</a>
-                    <a href="#" class="hover:text-amber-200">Twitter</a>
-                    <a href="#" class="hover:text-amber-200">Instagram</a>
+    <!-- footer -->
+    <footer class="bg-amber-900 text-white py-12" id="footer">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <!-- Company Information -->
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">One Coffee Kart</h3>
+                        <p class="text-amber-200">Your trusted partner in global coffee trading</p>
+                        <div class="mt-4">
+                            <h4 class="font-bold mb-2">Contact Info</h4>
+                            <p>Email: onecoffeekart@gmail.com</p>
+                            <p>Phone 1: 8943454306</p>
+                            <p>Phone 2: 8075243097</p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mt-4">
+                            <h4 class="font-bold mb-2">Address</h4>
+                            <p>Achooranam</p>
+                            <p>6th mile</p>
+                            <p>Wayanad,673575</p>
+                        </div>
+                    </div>
                 </div>
+                <!-- Map Section -->
+                <div class="h-64 bg-gray-200 rounded-lg overflow-hidden" id="map"></div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-amber-800 text-center">
+                <p>&copy; 2024 One Coffee Kart. All rights reserved.</p>
             </div>
         </div>
-        <div class="text-center mt-8 pt-8 border-t border-gray-800">
-            <p>&copy; 2024 One Coffee Kart. All rights reserved.</p>
-        </div>
-    </div>
-</footer>
+    </footer>
 
 </body>
 </html>
